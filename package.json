@@ -1,0 +1,39 @@
+{
+  "name": "Sweeten-Node",
+  "version": "1.0.0",
+  "description": "Handling matching contracttors and houseowners",
+  "main": "index.js",
+  "repository": "https://github.com/SuryaN1995/Sweeten-Node.git",
+  "author": "Surya N <surya.n1447@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "lint": "prettier --check 'src/**/**.js'",
+    "test": "NODE_ENV=test jest"
+  },
+  "dependencies": {
+    "awilix": "^4.2.3",
+    "connect-mongo": "^3.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "log4js": "^6.1.0",
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2",
+    "pug": "^2.0.4",
+    "ramda": "^0.26.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/public/"
+    ]
+  }
+}
