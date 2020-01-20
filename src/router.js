@@ -1,10 +1,10 @@
-const bodyParser = require('body-parser');
-const express = require('express');
-const { partialRight } = require('ramda');
+const bodyParser = require("body-parser");
+const express = require("express");
+const { partialRight } = require("ramda");
 
-const controller = require('./utils/createController');
+const controller = require("./utils/createController");
 
-const { errorHandler } = require('./utils/errorHandler.js');
+const { errorHandler } = require("./utils/errorHandler.js");
 
 module.exports = ({ config, logger }) => {
   const router = express.Router();
@@ -12,10 +12,10 @@ module.exports = ({ config, logger }) => {
   router.use(bodyParser.urlencoded({ extended: true }));
   router.use(bodyParser.json());
 
-  router.use('/', controller('index'));
+  router.use("/", controller("index"));
 
   // 404, should be the last route.
-  router.get('*', function(req, res) {
+  router.get("*", function(req, res) {
     res.status(404).send();
   });
 
