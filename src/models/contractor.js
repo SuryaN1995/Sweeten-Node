@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 module.exports = ({ config }) => {
   const contractor = new mongoose.Schema(
     {
+      contractorId: 'string',
       location: {
           lat: mongoose.Types.Decimal128,
           lon: mongoose.Types.Decimal128

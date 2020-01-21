@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 module.exports = ({ config }) => {
   const owner = new mongoose.Schema(
     {
+      ownerId: {type:String,required:true},
       location: {
           lat: mongoose.Types.Decimal128,
           lon: mongoose.Types.Decimal128

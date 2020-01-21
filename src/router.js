@@ -14,6 +14,10 @@ module.exports = ({ config, logger }) => {
 
   router.use("/", controller("index"));
 
+  router.use("/owner", controller("owner"));
+
+  router.use("/contractor", controller("contractor"))
+
   // 404, should be the last route.
   router.get("*", function(req, res) {
     res.status(404).send();
