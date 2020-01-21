@@ -17,6 +17,9 @@ module.exports = ({ config }) => {
           ownerId: { type: Schema.Types.ObjectId, ref: 'Owner' },
           interested: 'boolean'
       }],
+      projectsTaken:[{
+        ownerId: { type: Schema.Types.ObjectId, ref: 'Owner' },
+      }]
     },
     { timestamps: true },
   );
