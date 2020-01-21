@@ -21,9 +21,10 @@ my-app
 └── src
 │    ├── controllers
 │    │   ├── contractor.js
-│    │   ├── helper.js // Helper class to handle the function
 │    │   ├── owner.js
 │    │   └── index.js
+│    ├── helpers
+│    │   └── helperClass.js // Helper class to handle the function
 │    ├── models
 │    │   ├── contractor.js
 |    |   ├── owner.js

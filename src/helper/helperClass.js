@@ -1,8 +1,8 @@
 class Helpers {
   /**
    * GetLocation in kilometers
-   * @param {*} location1
-   * @param {*} location2
+   * @param {Location} location1
+   * @param {Location} location2
    */
   getDistance(location1, location2) {
     let lat1 = location1.lat;

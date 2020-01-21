@@ -1,7 +1,7 @@
 const express = require("express");
 const container = require("../container.js");
 const HttpError = require("../utils/HttpError");
-const Helper = require("./helper");
+const Helper = require("../helper/helperClass");
 
 module.exports = () => {
   const {

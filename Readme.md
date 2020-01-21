@@ -1,4 +1,4 @@
-# Sweeten project app for taking projects and handling renovation owner and contractor matching.
+# Sweeten project app for handling renovation projects, and matching owner and contractor.
 
 # Technologies:
 
