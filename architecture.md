@@ -12,10 +12,6 @@ my-app
 ├── package.json
 ├── node_modules
 ├── .gitignore
-├── public // static public dir
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
 ├── tests // test suite
 │   └── app.spec.js
 └── src
@@ -23,11 +19,14 @@ my-app
 │    │   ├── contractor.js
 │    │   ├── owner.js
 │    │   └── index.js
+│    ├── html // static public dir
+│    │   ├── favicon.ico
+│    │   └── index.html
 │    ├── helpers
 │    │   └── helperClass.js // Helper class to handle the function
 │    ├── models
 │    │   ├── contractor.js
-|    |   ├── owner.js
+│    │   ├── owner.js
 │    │   └── index.js // model builder, reads through dir and generates list of outputs
 │    ├── config
 │    │   └── index.js // main config, loads from env and exports final configs
