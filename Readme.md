@@ -9,6 +9,10 @@
 
 Read about the architecture [here](./architecture.md)
 
+# Project Description
+
+Read about the project description [here](./description.md)
+
 # Getting Started
 
 ## Local Development

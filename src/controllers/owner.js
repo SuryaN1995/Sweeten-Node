@@ -181,6 +181,28 @@ module.exports = () => {
     }
   });
 
+  router.post("/completedOrOut",async (req, res, next) => {
+    try {
+      let owner = await validateUser(req.headers);
+      if (owner instanceof HttpError) {
+        return next(owner);
+      }
+      let contractorList = owner.optContractors.filter(({contractor:{contractorId}}) => contractorId != req.body.contractorId);
+      owner.optContractors = contractorList;
+      owner.save();
+      let contractor = await Contractor.findOne({contractorId:req.body.contractorId});
+      let projects = contractor.projectsTaken.filter(({proj:{contractorId}}) => 
+        contractorId != req.body.contractorId
+      )
+      contractor.projectsTaken = projects;
+      contractor.save();
+      res.send();
+    } catch (error) {
+      return next(new HttpError(error));
+    }
+  });
+
+
   async function validateUser(headers) {
     try {
       let { userid: _id } = headers;
